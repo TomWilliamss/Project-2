@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Project 2 Part1
+%Project 2 Part 1
 %
 %Purpose: isolate 4 largest components and color codes them
 %
@@ -13,6 +13,7 @@
 %Author: Ruike Tang
 %        09/27/2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 f = imread('lenna.gif'); %import image
 [M,N] = size(f); %get size
 for x = 1:M
@@ -108,20 +109,48 @@ fRGB4 = label2rgb(flabel4);
 figure(3);imshow(fRGB4)  %show result
 imwrite(fRGB4,'largest 4 components.tif');
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Project 2 Part 2B
+%
+%Purpose: Use custom AND, OR, XOR, and NOT functions on images A and B
+%
+%input: A      original image
+%       B      original image 
+%
+%outputs: figure4     AND image
+%         figure5     OR image
+%         figure6     XOR image
+%         figure7     NOT A image
+%
+%Author: Thomas Williams
+%        09/27/2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 A = imread("match1.gif");
 B = imread("match2.gif");
 
 %Testing the custom operators
-imtool(customAND(A,B)) %intersection of A and B
-imtool(customOR(A,B)) %union of A and B
-imtool(customXOR(A,B)) %(~AnB)u(An~B)
-imtool(customNOT(A)) %Not A (~A)
+figure(4);imshow(customAND(A,B)) %intersection of A and B
+figure(5);imshow(customOR(A,B)) %union of A and B
+figure(6);imshow(customXOR(A,B)) %(~AnB)u(An~B)
+figure(7);imshow(customNOT(A)) %Not A (~A)
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Project 2 Part 2C
+%
+%Purpose: Take the minimum of two values and keep it for resulting image
+%
+%input: C     original image
+%       D     original image 
+%
+%outputs: figure8     minimum value image
+%
+%Author: Vladimir Shluharchuk
+%        09/27/2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 C = imread("mandril_gray.tif");
 D = imread("cameraman.tif");
 
 %Testing min operator
-imtool(customMIN(C,D)) %Assigns min of two values to output
+figure(8);imshow(customMIN(C,D)) %Assigns min of two values to output

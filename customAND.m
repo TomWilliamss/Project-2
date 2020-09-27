@@ -1,4 +1,4 @@
-%Project 2 Part 2a
+%Project 2 Part 2A
 %AND Function
 
 function ANDimage = customAND(A,B)

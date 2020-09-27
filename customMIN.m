@@ -1,4 +1,4 @@
-%Project 2 Part 2c
+%Project 2 Part 2C
 %min operator
 
 function E = customMIN(C,D)
@@ -14,5 +14,5 @@ for x=1:M
         end
     end
 end
-E = res;
+E = uint8(res);
 end
