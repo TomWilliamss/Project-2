@@ -1,5 +1,5 @@
-% Project 2 Part 2a
-% OR Function
+%Project 2 Part 2a
+%OR Function
 
 function ORimage = customOR(A,B)
 

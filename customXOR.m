@@ -1,5 +1,5 @@
-% Project 2 Part 2a
-% XOR Function
+%Project 2 Part 2a
+%XOR Function
 
 function XORimage = customXOR(A,B)
 

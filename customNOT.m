@@ -1,5 +1,5 @@
-% Project 2 Part 2a
-% NOT Function
+%Project 2 Part 2a
+%NOT Function
 
 function NOTimage = customNOT(A)
 

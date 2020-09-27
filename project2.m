@@ -105,16 +105,23 @@ for x = 1:M      %loop through the image
 end
 
 fRGB4 = label2rgb(flabel4);
-figure(3);imshow(fRGB4)  % show result
+figure(3);imshow(fRGB4)  %show result
 imwrite(fRGB4,'largest 4 components.tif');
 
-% Project 2 Part 2b
+%Project 2 Part 2B
 
 A = imread("match1.gif");
 B = imread("match2.gif");
 
-% Testing the custom operators
+%Testing the custom operators
 imtool(customAND(A,B)) %intersection of A and B
 imtool(customOR(A,B)) %union of A and B
 imtool(customXOR(A,B)) %(~AnB)u(An~B)
 imtool(customNOT(A)) %Not A (~A)
+
+%Project 2 Part 2C
+C = imread("mandril_gray.tif");
+D = imread("cameraman.tif");
+
+%Testing min operator
+imtool(customMIN(C,D)) %Assigns min of two values to output
